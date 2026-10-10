@@ -42,16 +42,19 @@ Your task is to containerize this existing application using Docker. You need to
 
 ```bash
 
-```
+docker build -t docker-assignment .
+
 
 - To run your docker container in port 3000 run the command:
 
 ```bash
 
-```
+docker run -d -p 3000:3000 --name docker-app docker-assignment
+
 
 ## Reflection Question
 **Answer the following question in the space below**: How does containerization with Docker differ from using virtual machines, and why might a development team choose Docker containers over VMs for deploying applications like the one you just containerized?
+Docker containers package an application with its runtime and dependencies while sharing the kernel of the operating system they run on. Virtual machines include a complete guest operating system, so they usually need more memory and storage and take longer to start. A development team might choose Docker for this Node.js application because everyone can use the same image without installing Node.js separately. This reduces problems caused by different software versions or missing dependencies. Containers also make deployment and scaling easier because the team can start additional copies of the same image when needed. Virtual machines are useful when a team needs separate operating systems or stronger isolation.
 
 
 
