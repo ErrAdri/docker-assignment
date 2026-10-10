@@ -50,6 +50,7 @@ docker build -t docker-assignment .
 ```bash
 
 docker run -d -p 3000:3000 --name docker-app docker-assignment
+```
 
 
 ## Reflection Question
